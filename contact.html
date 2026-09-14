@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contato — RechBee Photograph. Vamos fotografar uma história? São Paulo, SP — Brasil.">
+  <title>Contato — RechBee Photograph</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+
+  <header id="siteHeader"></header>
+
+  <main>
+
+    <section class="page-head contact-head container">
+      <p class="label" data-i18n="contact.label">Contato</p>
+      <h1 class="contact-title" data-i18n="home.cta.title">Vamos fotografar uma história?</h1>
+      <p class="page-sub prose" data-i18n="contact.sub">Conte o que você está planejando. A gente conversa, se encontra e fotografa o que a sua vida está sendo.</p>
+    </section>
+
+    <section class="container contact-grid" style="padding-bottom: 120px;">
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-el">
+          <input type="text" id="name" name="name" placeholder=" " autocomplete="name" required>
+          <label for="name" data-i18n="form.name">Nome</label>
+        </div>
+        <div class="form-el">
+          <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required>
+          <label for="email" data-i18n="form.email">E-mail</label>
+        </div>
+        <div class="form-el">
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder=" ">
+          <label for="whatsapp" data-i18n="form.whatsapp">WhatsApp</label>
+        </div>
+        <div class="form-el">
+          <select id="planning" name="planning">
+            <option value="" disabled selected data-i18n="form.planning">O que você está planejando?</option>
+            <option value="women" data-i18n="form.option.women">Ensaio feminino</option>
+            <option value="families" data-i18n="form.option.families">Ensaio de família</option>
+            <option value="prewed" data-i18n="form.option.prewed">Pre wedding</option>
+            <option value="civil" data-i18n="form.option.civil">Civil day</option>
+            <option value="other" data-i18n="form.option.other">Outra coisa</option>
+          </select>
+          <label for="planning" data-i18n="form.planning">O que você está planejando?</label>
+        </div>
+        <div class="form-el">
+          <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+          <label for="message" data-i18n="form.message">Mensagem</label>
+        </div>
+        <button type="submit" class="btn-line" style="margin-top: 8px;" data-i18n="form.submit">Quero fotografar</button>
+        <p class="form-success hide" id="formSuccess" data-i18n="contact.success">Mensagem enviada. Obrigada — a gente responde em breve.</p>
+      </form>
+
+      <aside class="contact-info">
+        <div>
+          <h4 data-i18n="contact.local">Local</h4>
+          <p>São Paulo, SP — Brasil</p>
+        </div>
+        <div>
+          <h4 data-i18n="contact.email">E-mail</h4>
+          <a href="mailto:oi@rechbee.com">oi@rechbee.com</a>
+        </div>
+        <div>
+          <h4 data-i18n="contact.whatsapp">WhatsApp</h4>
+          <a href="https://wa.me/5511900000000" target="_blank" rel="noopener">+55 11 90000-0000</a>
+        </div>
+        <div>
+          <h4 data-i18n="contact.instagram">Instagram</h4>
+          <a href="https://instagram.com/rechbee.photograph" target="_blank" rel="noopener">@rechbee.photograph</a>
+        </div>
+      </aside>
+
+    </section>
+
+  </main>
+
+  <footer id="siteFooter"></footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
