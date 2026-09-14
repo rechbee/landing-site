@@ -1,15 +1,16 @@
 :root {
-  --bg: #F5F2EC;
-  --bg-deep: #EDE9E0;
-  --sand: #E2DCCF;
-  --taupe: #B7AE9F;
-  --concrete: #89827A;
-  --ink: #1C1A17;
-  --ink-soft: rgba(28, 26, 23, 0.62);
-  --line: #D9D2C2;
-  --line-dark: rgba(28, 26, 23, 0.14);
+  --bg: #F7F4EE;
+  --bg-deep: #E7DFD1;
+  --sand: #E7DFD1;
+  --taupe: #8C8477;
+  --concrete: #B9AFA2;
+  --ink: #2B2925;
+  --ink-soft: rgba(43, 41, 37, 0.62);
+  --line: rgba(185, 175, 162, 0.55);
+  --line-dark: rgba(43, 41, 37, 0.14);
+  --accent: #B98A3D;
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --sans: "Inter", "Segoe UI", system-ui, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -73,7 +74,7 @@ a {
 }
 
 .section--taupe {
-  background: var(--taupe);
+  background: var(--concrete);
   color: var(--ink);
 }
 
@@ -167,7 +168,7 @@ a {
   font-size: 0.58rem;
   letter-spacing: 0.42em;
   text-transform: uppercase;
-  color: var(--concrete);
+  color: var(--taupe);
   margin-top: 6px;
 }
 
@@ -255,8 +256,8 @@ body.menu-open .nav-toggle span:nth-child(3) {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(28, 26, 23, 0.42) 0%, rgba(28, 26, 23, 0.68) 100%),
-    linear-gradient(115deg, #8d8577 0%, #c4b8a4 34%, #9a8e7d 62%, #6d675d 100%);
+    linear-gradient(180deg, rgba(43, 41, 37, 0.45) 0%, rgba(43, 41, 37, 0.72) 100%),
+    linear-gradient(115deg, #9d9386 0%, #cfc5b5 35%, #8C8477 65%, #5f594f 100%);
 }
 
 .hero-visual::after {
@@ -413,6 +414,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
 
 .link-more:hover {
   gap: 18px;
+  border-bottom-color: var(--accent);
 }
 
 /* ---------- Editorial grid ---------- */
@@ -472,7 +474,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
   font-family: var(--serif);
   font-style: italic;
   font-size: 0.85rem;
-  color: var(--concrete);
+  color: var(--taupe);
   margin-top: 14px;
   letter-spacing: 0.06em;
 }
@@ -483,7 +485,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
   font-size: 0.62rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--concrete);
+  color: var(--taupe);
   margin-top: 6px;
 }
 
@@ -661,7 +663,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
 
 .filters button.active {
   color: var(--ink);
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--accent);
 }
 
 .grid-portfolio {
@@ -884,7 +886,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
 .form-el textarea:focus,
 .form-el select:focus {
   outline: none;
-  border-bottom-color: var(--ink);
+  border-bottom-color: var(--accent);
 }
 
 .form-el label {

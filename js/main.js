@@ -5,7 +5,7 @@ const I18N = {
     'nav.about': 'Sobre',
     'nav.contact': 'Contato',
     'nav.instagram': 'Instagram',
-    'brand.tagline': 'Photograph',
+    'brand.tagline': 'Photography',
     'view.more': 'ver',
 
     'hero.label': 'Fotografia documental & autoral',
@@ -118,7 +118,7 @@ const I18N = {
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'nav.instagram': 'Instagram',
-    'brand.tagline': 'Photograph',
+    'brand.tagline': 'Photography',
     'view.more': 'view',
 
     'hero.label': 'Documental & authoral photography',
@@ -229,15 +229,15 @@ const I18N = {
 };
 
 const TITLES = {
-  'home': ['RechBee Photograph', 'RechBee Photograph'],
-  'portfolio': ['Portfólio — RechBee Photograph', 'Portfolio — RechBee Photograph'],
-  'stories': ['Histórias — RechBee Photograph', 'Stories — RechBee Photograph'],
-  'women': ['Feminino — RechBee Photograph', 'Women — RechBee Photograph'],
-  'families': ['Família — RechBee Photograph', 'Families — RechBee Photograph'],
-  'prewedding': ['Pre Wedding — RechBee Photograph', 'Pre Wedding — RechBee Photograph'],
-  'civil': ['Civil Day — RechBee Photograph', 'Civil Day — RechBee Photograph'],
-  'about': ['Sobre — RechBee Photograph', 'About — RechBee Photograph'],
-  'contact': ['Contato — RechBee Photograph', 'Contact — RechBee Photograph']
+  'home': ['RechBee Photography', 'RechBee Photography'],
+  'portfolio': ['Portfólio — RechBee Photography', 'Portfolio — RechBee Photography'],
+  'stories': ['Histórias — RechBee Photography', 'Stories — RechBee Photography'],
+  'women': ['Feminino — RechBee Photography', 'Women — RechBee Photography'],
+  'families': ['Família — RechBee Photography', 'Families — RechBee Photography'],
+  'prewedding': ['Pre Wedding — RechBee Photography', 'Pre Wedding — RechBee Photography'],
+  'civil': ['Civil Day — RechBee Photography', 'Civil Day — RechBee Photography'],
+  'about': ['Sobre — RechBee Photography', 'About — RechBee Photography'],
+  'contact': ['Contato — RechBee Photography', 'Contact — RechBee Photography']
 };
 
 const LINKS = {
@@ -354,7 +354,7 @@ function buildLayout() {
           </div>
         </div>
         <div class="footer-bottom">
-          <span>RECHBEE PHOTOGRAPH — São Paulo, BR</span>
+          <span>RECHBEE PHOTOGRAPHY — São Paulo, BR</span>
           <span>&copy; <span id="year"></span> <span data-i18n="footer.rights">Todos os direitos reservados.</span></span>
         </div>
       </div>`;
