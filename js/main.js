@@ -5,23 +5,27 @@ const I18N = {
     'nav.about': 'Sobre',
     'nav.contact': 'Contato',
     'nav.instagram': 'Instagram',
-    'brand.tagline': 'Photography',
+    'brand.tagline': 'photography',
     'view.more': 'ver',
 
     'hero.label': 'Fotografia documental & autoral',
-    'hero.sub': 'Pessoas. Fases. Histórias.',
+    'hero.sub': 'pessoas. fases. histórias.',
 
     'manifesto.label': 'Por que fotografar',
     'manifesto.text': 'A vida acontece rápido. A fotografia é uma forma de ficar.',
 
     'uni.women.title': 'Feminino',
     'uni.women.about': 'Fotografias para mulheres em diferentes fases da vida. Não é sobre criar uma personagem — é sobre revelar quem ela já é.',
+    'uni.women.home': 'Uma mulher, uma fase, um retrato verdadeiro.',
     'uni.families.title': 'Família',
     'uni.families.about': 'Fotografia documental e afetiva. Casa, rua, viagem, cotidiano. A dinâmica real da família, não a foto perfeita.',
+    'uni.families.home': 'A dinâmica real da família, sem pose.',
     'uni.prewed.title': 'Pre Wedding',
     'uni.prewed.about': 'Antes do casamento, a relação. Caminhar, conversar, rir, existir juntos — na cidade ou em um lugar que importa.',
+    'uni.prewed.home': 'O que existe entre vocês, antes do casamento.',
     'uni.civil.title': 'Civil Day',
     'uni.civil.about': 'Cobertura íntima e documental do casamento civil. Pequeno em tamanho, enorme em significado.',
+    'uni.civil.home': 'Pequeno em tamanho, enorme em significado.',
     'uni.index.one': 'Universo 01',
     'uni.index.two': 'Universo 02',
     'uni.index.three': 'Universo 03',
@@ -29,10 +33,9 @@ const I18N = {
 
     'home.universes.title': 'O que a gente fotografa',
 
-    'home.about.label': 'A fotógrafa',
-    'home.about.title': 'Jennifer Rech',
-    'home.about.text': 'Arquiteta e fotógrafa. O olhar RechBee nasce do encontro entre o espaço e a vida das pessoas.',
-    'home.about.link': 'conhecer a história',
+    'home.about.line1': 'A RechBee nasceu muito antes da câmera.',
+    'home.about.line2': 'Nasceu nas memórias do meu avô, Vilibaldo.',
+    'home.about.link': 'Ler a história →',
 
     'home.editorial.title': 'Um diário visual',
 
@@ -41,7 +44,7 @@ const I18N = {
     'home.ig.cta': 'seguir',
 
     'home.cta.title': 'Vamos fotografar uma história?',
-    'home.cta.link': 'escreva para nós',
+    'home.cta.link': 'Entrar em contato →',
 
     'page.portfolio.label': 'Portfólio',
     'page.portfolio.sub': 'Uma seleção de ensaios, fases e histórias que merecem permanecer.',
@@ -117,23 +120,27 @@ const I18N = {
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'nav.instagram': 'Instagram',
-    'brand.tagline': 'Photography',
+    'brand.tagline': 'photography',
     'view.more': 'view',
 
-    'hero.label': 'Documental & authoral photography',
-    'hero.sub': 'People. Phases. Stories.',
+    'hero.label': 'Documental & authorial photography',
+    'hero.sub': 'people. phases. stories.',
 
     'manifesto.label': 'Why we photograph',
     'manifesto.text': 'Life happens fast. Photography is a way of staying.',
 
     'uni.women.title': 'Women',
     'uni.women.about': 'Photographs for women in different phases of life. Not about creating a character — it is about revealing who she already is.',
+    'uni.women.home': 'A woman, a phase, a true portrait.',
     'uni.families.title': 'Families',
     'uni.families.about': 'Documental, affectionate photography. Home, street, travel, everyday life. The real dynamics of the family, not the perfect shot.',
+    'uni.families.home': 'The real family dynamics, no posing.',
     'uni.prewed.title': 'Pre Wedding',
     'uni.prewed.about': 'Before the wedding, the relationship. Walking, talking, laughing, existing together — in the city or somewhere that matters.',
+    'uni.prewed.home': 'What exists between you, before the wedding.',
     'uni.civil.title': 'Civil Day',
     'uni.civil.about': 'Intimate, documental civil-wedding coverage. Small in size, huge in meaning.',
+    'uni.civil.home': 'Small in size, huge in meaning.',
     'uni.index.one': 'Universe 01',
     'uni.index.two': 'Universe 02',
     'uni.index.three': 'Universe 03',
@@ -142,10 +149,9 @@ const I18N = {
     'home.universes.label': 'The universes',
     'home.universes.title': 'What we photograph',
 
-    'home.about.label': 'The photographer',
-    'home.about.title': 'Jennifer Rech',
-    'home.about.text': 'Architect and photographer. The RechBee eye is born from the meeting of space and people\'s lives.',
-    'home.about.link': 'read the story',
+    'home.about.line1': 'RechBee was born long before the camera.',
+    'home.about.line2': 'It was born in the memories of my grandfather, Vilibaldo.',
+    'home.about.link': 'Read the story →',
 
     'home.editorial.title': 'A visual journal',
 
@@ -153,8 +159,8 @@ const I18N = {
     'home.ig.text': 'Everyday photographs, behind the scenes and sessions in progress.',
     'home.ig.cta': 'follow',
 
-    'home.cta.title': 'Let\'s make something to remember?',
-    'home.cta.link': 'write to us',
+    'home.cta.title': 'Let\'s photograph a story?',
+    'home.cta.link': 'Get in touch →',
 
     'page.portfolio.label': 'Portfolio',
     'page.portfolio.sub': 'A selection of sessions, phases and stories worth keeping.',
@@ -307,8 +313,8 @@ function buildLayout() {
     header.innerHTML = `
       <div class="container nav">
         <a href="index.html" class="brand">
-          <span class="brand-name">RECHBEE</span>
-          <span class="brand-tag" data-i18n="brand.tagline">Photograph</span>
+          <span class="brand-name">RechBee</span>
+          <span class="brand-tag" data-i18n="brand.tagline">photography</span>
         </a>
         <ul class="nav-links">
           <li><a href="${LINKS.portfolio}" data-page-link data-i18n="nav.portfolio" ${page === 'portfolio' ? 'class="current"' : ''}>Portfólio</a></li>
