@@ -10,7 +10,6 @@ const I18N = {
 
     'hero.label': 'Fotografia documental & autoral',
     'hero.sub': 'Pessoas. Fases. Histórias.',
-    'hero.scroll': 'deslizar',
 
     'manifesto.label': 'Por que fotografar',
     'manifesto.text': 'A vida acontece rápido. A fotografia é uma forma de ficar.',
@@ -123,7 +122,6 @@ const I18N = {
 
     'hero.label': 'Documental & authoral photography',
     'hero.sub': 'People. Phases. Stories.',
-    'hero.scroll': 'scroll',
 
     'manifesto.label': 'Why we photograph',
     'manifesto.text': 'Life happens fast. Photography is a way of staying.',
@@ -318,7 +316,7 @@ function buildLayout() {
           <li><a href="${LINKS.about}" data-page-link data-i18n="nav.about" ${page === 'about' ? 'class="current"' : ''}>Sobre</a></li>
           <li><a href="${LINKS.contact}" data-page-link data-i18n="nav.contact" ${page === 'contact' ? 'class="current"' : ''}>Contato</a></li>
         </ul>
-        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">PT / EN</button>
         <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -379,7 +377,14 @@ function applyLanguage(lang) {
   });
 
   const toggle = document.getElementById('langToggle');
-  if (toggle) toggle.textContent = lang === 'pt-BR' ? 'EN' : 'PT';
+  if (toggle) {
+    const pt = lang === 'pt-BR' ? 'active' : '';
+    const en = lang === 'en' ? 'active' : '';
+    toggle.innerHTML =
+      '<span class="lang-item ' + pt + '">PT</span>' +
+      '<span aria-hidden="true">&nbsp;/&nbsp;</span>' +
+      '<span class="lang-item ' + en + '">EN</span>';
+  }
 
   const page = document.body.dataset.page;
   if (page && TITLES[page]) {

@@ -14,6 +14,23 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Wordmark RechBee — fonte TAN Meringue (arquivo em /fonts/TAN-Meringue.woff2).
+   Ate o arquivo ser adicionado, cai no fallback serif generico. */
+@font-face {
+  font-family: "TAN Meringue";
+  src: url("/fonts/TAN-Meringue.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.wordmark {
+  font-family: "TAN Meringue", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -134,14 +151,14 @@ a {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 90;
-  padding: 26px 0;
+  padding: 18px 0;
   transition: background 0.4s var(--ease), padding 0.4s var(--ease);
 }
 
 .header.scrolled {
-  background: rgba(245, 242, 236, 0.92);
+  background: rgba(247, 244, 238, 0.94);
   backdrop-filter: blur(10px);
-  padding: 14px 0;
+  padding: 11px 0;
   border-bottom: 1px solid var(--line-dark);
 }
 
@@ -153,36 +170,39 @@ a {
 
 .brand {
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
+  gap: 8px;
   line-height: 1;
 }
 
 .brand-name {
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: 1.35rem;
-  letter-spacing: 0.16em;
+  font-family: "TAN Meringue", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--ink);
 }
 
 .brand-tag {
-  font-size: 0.58rem;
-  letter-spacing: 0.42em;
+  font-size: 0.52rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--taupe);
-  margin-top: 6px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: clamp(20px, 3.4vw, 44px);
+  gap: clamp(18px, 2.6vw, 36px);
   list-style: none;
 }
 
 .nav-links a {
-  font-size: 0.74rem;
-  font-weight: 500;
-  letter-spacing: 0.24em;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-soft);
   transition: color 0.25s ease;
@@ -195,21 +215,30 @@ a {
 
 .lang-toggle {
   font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   background: none;
-  border: 1px solid var(--line-dark);
-  color: var(--ink);
-  padding: 8px 16px;
-  border-radius: 999px;
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: var(--taupe);
+  padding: 2px 0;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: color 0.25s ease, border-bottom-color 0.25s ease;
+}
+
+.lang-toggle .lang-item {
+  color: var(--concrete);
+  transition: color 0.25s ease;
+}
+
+.lang-toggle .lang-item.active {
+  color: var(--ink);
 }
 
 .lang-toggle:hover {
-  border-color: var(--ink);
+  color: var(--ink);
+  border-bottom-color: var(--accent);
 }
 
 .nav-toggle {
@@ -245,7 +274,8 @@ body.menu-open .nav-toggle span:nth-child(3) {
 
 .hero {
   position: relative;
-  min-height: 100svh;
+  height: 82svh;
+  min-height: 560px;
   display: flex;
   align-items: flex-end;
   color: var(--bg);
@@ -256,7 +286,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(43, 41, 37, 0.45) 0%, rgba(43, 41, 37, 0.72) 100%),
+    linear-gradient(180deg, rgba(43, 41, 37, 0.3) 0%, rgba(43, 41, 37, 0.55) 100%),
     linear-gradient(115deg, #9d9386 0%, #cfc5b5 35%, #8C8477 65%, #5f594f 100%);
 }
 
@@ -272,43 +302,57 @@ body.menu-open .nav-toggle span:nth-child(3) {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 0 0 9vh;
+  padding: 0 0 7vh;
 }
 
-.hero-label {
-  color: rgba(245, 242, 236, 0.8);
-  margin-bottom: 22px;
-}
-
-.hero-title {
-  font-family: var(--serif);
-  font-weight: 420;
-  font-size: clamp(3rem, 11vw, 8.5rem);
-  line-height: 0.98;
-  letter-spacing: 0.04em;
-}
-
-.hero-sub {
-  font-family: var(--serif);
-  font-weight: 380;
-  font-style: italic;
-  font-size: clamp(1.05rem, 2.6vw, 1.7rem);
-  letter-spacing: 0.24em;
+.hero-eyebrow {
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(245, 242, 236, 0.94);
-  margin-top: 26px;
+  color: rgba(247, 244, 238, 0.78);
+  margin-bottom: 16px;
+}
+
+.hero .wordmark {
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.02;
+  color: var(--bg);
+}
+
+.hero-word-ph {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.8);
+  margin-top: 12px;
+}
+
+.hero-tag {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: rgba(247, 244, 238, 0.88);
+  margin-top: 16px;
 }
 
 .hero-scroll {
   position: absolute;
   z-index: 2;
   right: 4vw;
-  bottom: 6vh;
-  writing-mode: vertical-rl;
-  font-size: 0.62rem;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-  color: rgba(245, 242, 236, 0.66);
+  bottom: 5vh;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(247, 244, 238, 0.62);
+  transition: color 0.25s ease;
+}
+
+.hero-scroll:hover {
+  color: var(--bg);
 }
 
 /* ---------- Manifesto ---------- */
@@ -999,15 +1043,62 @@ body.menu-open .nav-toggle span:nth-child(3) {
   transform: none;
 }
 
+/* ---------- Home: tipografia discreta (a unica expressiva e o wordmark) ---------- */
+
+body[data-page="home"] .sec-title {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.8vw, 2rem);
+  letter-spacing: 0.01em;
+}
+
+body[data-page="home"] .manifesto p,
+body[data-page="home"] .quote blockquote {
+  font-family: var(--sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 2.4vw, 1.6rem);
+  line-height: 1.55;
+}
+
+body[data-page="home"] .universo-body h3 {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+  letter-spacing: 0.02em;
+}
+
+body[data-page="home"] .about-strip h2 {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2.4vw, 1.7rem);
+}
+
+body[data-page="home"] .uni-msg h2 {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2.8vw, 2rem);
+}
+
+body[data-page="home"] .figcaption,
+body[data-page="home"] .figcaption small {
+  font-family: var(--sans);
+  font-style: normal;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
+  .hero {
+    height: 74svh;
+  }
+
   .nav-links {
     position: fixed;
     inset: 0;
     flex-direction: column;
     justify-content: center;
-    gap: 34px;
+    gap: 28px;
     background: var(--bg);
     opacity: 0;
     pointer-events: none;
@@ -1028,25 +1119,39 @@ body.menu-open .nav-toggle span:nth-child(3) {
     z-index: 2;
   }
 
-body.menu-open .header {
-  background: rgba(245, 242, 236, 0.96);
-}
+  .lang-toggle {
+    position: fixed;
+    left: 8vw;
+    bottom: 7vh;
+    z-index: 5;
+    display: none;
+  }
 
-body[data-page="home"] .header:not(.scrolled) .brand-name,
-body[data-page="home"] .header:not(.scrolled) .brand-tag,
-body[data-page="home"] .header:not(.scrolled) .nav-links a {
-  color: var(--bg);
-}
+  body.menu-open .lang-toggle {
+    display: block;
+  }
 
-body[data-page="home"] .header:not(.scrolled) .lang-toggle {
-  color: var(--bg);
-  border-color: rgba(245, 242, 236, 0.55);
-}
+  body.menu-open .header .nav-links a,
+  body.menu-open .header .lang-toggle,
+  body.menu-open .header .lang-toggle .lang-item,
+  body.menu-open .header .brand-name {
+    color: var(--ink);
+  }
 
-.lang-toggle {
-  position: relative;
-  z-index: 3;
-}
+  body.menu-open .header {
+    background: rgba(247, 244, 238, 0.97);
+  }
+
+  body[data-page="home"] .header:not(.scrolled) .brand-name,
+  body[data-page="home"] .header:not(.scrolled) .brand-tag,
+  body[data-page="home"] .header:not(.scrolled) .nav-links a {
+    color: var(--bg);
+  }
+
+  body[data-page="home"] .header:not(.scrolled) .lang-toggle,
+  body[data-page="home"] .header:not(.scrolled) .lang-toggle .lang-item {
+    color: var(--bg);
+  }
 
   .universo,
   .universo:nth-child(even) .visual,
